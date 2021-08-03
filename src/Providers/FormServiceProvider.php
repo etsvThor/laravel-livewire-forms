@@ -1,9 +1,9 @@
 <?php
 
-namespace Kdion4891\LaravelLivewireForms\Providers;
+namespace EtsvThor\LaravelLivewireForms\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Kdion4891\LaravelLivewireForms\Commands\MakeForm;
+use EtsvThor\LaravelLivewireForms\Commands\MakeForm;
 
 class FormServiceProvider extends ServiceProvider
 {

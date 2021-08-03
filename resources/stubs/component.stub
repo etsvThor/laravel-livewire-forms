@@ -3,9 +3,9 @@
 namespace App\Http\Livewire;
 
 use App\DummyModel;
-use Kdion4891\LaravelLivewireForms\ArrayField;
-use Kdion4891\LaravelLivewireForms\Field;
-use Kdion4891\LaravelLivewireForms\FormComponent;
+use EtsvThor\LaravelLivewireForms\ArrayField;
+use EtsvThor\LaravelLivewireForms\Field;
+use EtsvThor\LaravelLivewireForms\FormComponent;
 
 class DummyComponent extends FormComponent
 {

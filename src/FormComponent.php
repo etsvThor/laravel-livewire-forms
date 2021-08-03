@@ -1,11 +1,11 @@
 <?php
 
-namespace Kdion4891\LaravelLivewireForms;
+namespace EtsvThor\LaravelLivewireForms;
 
 use Illuminate\Support\Arr;
-use Kdion4891\LaravelLivewireForms\Traits\FollowsRules;
-use Kdion4891\LaravelLivewireForms\Traits\HandlesArrays;
-use Kdion4891\LaravelLivewireForms\Traits\UploadsFiles;
+use EtsvThor\LaravelLivewireForms\Traits\FollowsRules;
+use EtsvThor\LaravelLivewireForms\Traits\HandlesArrays;
+use EtsvThor\LaravelLivewireForms\Traits\UploadsFiles;
 use Livewire\Component;
 
 class FormComponent extends Component

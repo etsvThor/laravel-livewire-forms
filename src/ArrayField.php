@@ -1,6 +1,6 @@
 <?php
 
-namespace Kdion4891\LaravelLivewireForms;
+namespace EtsvThor\LaravelLivewireForms;
 
 class ArrayField extends BaseField
 {

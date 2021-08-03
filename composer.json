@@ -5,23 +5,21 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Thijs Lacquet",
-            "email": "thijsl@thor.edu"
+            "name": "Thijs Lacquet"
         },
         {
-            "name": "Niek Brekelmans",
-            "email": "niekb@thor.edu"
+            "name": "Niek Brekelmans"
         }
     ],
     "autoload": {
         "psr-4": {
-            "etsvThor\\LaravelLivewireForms\\": "src"
+            "EtsvThor\\LaravelLivewireForms\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "etsvThor\\LaravelLivewireForms\\Providers\\FormServiceProvider"
+                "EtsvThor\\LaravelLivewireForms\\Providers\\FormServiceProvider"
             ]
         }
     }

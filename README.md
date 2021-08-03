@@ -1,4 +1,4 @@
-The original package is no longer maintained. The readme below is coppied from the original package
+The original package is no longer maintained. The readme below is copied from the original package
 
 
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Kdion4891\LaravelLivewireForms\Traits;
+namespace EtsvThor\LaravelLivewireForms\Traits;
 
 trait UploadsFiles
 {
