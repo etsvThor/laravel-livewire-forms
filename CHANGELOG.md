@@ -1,9 +1,12 @@
 # Changelog
 
-# 0.1.0 - 2021-08-03
+# 2.0 - 2021-08-03
 
 ### Added
-- Forked from https://github.com/kdion4891/laravel-livewire-forms
 - Fixed bug when all fields are empty
 - Allow preview of other disks
 - Add controller for file upload
+
+
+# 1.3.1 and earlier
+See original repo on https://github.com/kdion4891/laravel-livewire-forms

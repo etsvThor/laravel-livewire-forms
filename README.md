@@ -1,5 +1,7 @@
 # Laravel Livewire Forms
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/etsvthor/laravel-livewire-forms.svg?style=flat-square)](https://packagist.org/packages/etsvthor/laravel-livewire-forms)
+
 ![Laravel Livewire Forms](https://i.imgur.com/YB0gEJ8.gif)
 
 A dynamic, responsive [Laravel Livewire](https://laravel-livewire.com) form component with realtime validation, file uploads, array fields, and more.
@@ -10,9 +12,9 @@ Make sure you've [installed Laravel Livewire](https://laravel-livewire.com/docs/
 
 Installing this package via composer:
 
-    composer require EtsvThor/laravel-livewire-forms
+    composer require etsvthor/laravel-livewire-forms
     
-This package was designed to work well with [Laravel frontend scaffolding](https://laravel.com/docs/master/frontend).
+This package was designed to work well with [Laravel frontend scaffolding](https://laravel.com/docs/7.x/frontend).
 
 If you're just doing scaffolding now, you'll need to add `@stack('scripts')`, `@livewireScripts`, and `@livewireStyles` blade directives to your `resources/views/layouts/app.blade.php` file:
 
