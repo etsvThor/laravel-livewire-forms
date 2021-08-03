@@ -1,6 +1,6 @@
 <?php
 
-namespace EtsvThor\LaravelLivewireForms\Controllers;
+namespace EtsvThor\LaravelLivewireForms\Http\Controllers;
 
 class FileUploadController
 {
