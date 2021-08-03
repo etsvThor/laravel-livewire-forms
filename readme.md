@@ -1,6 +1,4 @@
-# No Longer Maintained
-
-Please check out my latest package here: https://github.com/bastinald/laravel-livewire-forms
+The original package is no longer maintained. The readme below is coppied from the original package
 
 
 
