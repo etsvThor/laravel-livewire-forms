@@ -6,11 +6,11 @@
     "authors": [
         {
             "name": "Thijs Lacquet",
-            "email": "thijsl@thor.edu",
+            "email": "thijsl@thor.edu"
         },
         {
             "name": "Niek Brekelmans",
-            "email": "niekb@thor.edu",
+            "email": "niekb@thor.edu"
         }
     ],
     "autoload": {
