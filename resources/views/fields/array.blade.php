@@ -10,7 +10,11 @@
                     <div class="list-group-item list-group-item-action p-2">
                         <div class="form-row">
                             @foreach($field->array_fields as $array_field)
-                                @include('laravel-livewire-forms::array-fields.' . $array_field->type)
+                                @if($array_field->view)
+                                    @include($array_field->view)
+                                @else
+                                    @include('laravel-livewire-forms::array-fields.' . $array_field->type)
+                                @endif
                             @endforeach
                             <div class="col-md-auto">
                                 @if($field->array_sortable)
