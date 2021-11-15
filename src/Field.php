@@ -14,6 +14,10 @@ class Field extends BaseField
 
     public function __construct($label, $name)
     {
+        if (strpos($name, '.')) {
+            throw new \Exception('No . allowed in field name');
+        }
+
         $this->label = $label;
         $this->name = $name ?? Str::snake(Str::lower($label));
         $this->key = 'form_data.' . $this->name;
