@@ -10,7 +10,7 @@ trait UploadsFiles
         $storage_path = self::$storage_path ?? config('laravel-livewire-forms.storage_path');
         $files = [];
 
-        foreach (request()->file('files') as $file) {
+        foreach (request()->file('files') ?? [] as $file) {
             $files[] = [
                 'file' => $file->store($storage_path, $storage_disk),
                 'disk' => $storage_disk,
