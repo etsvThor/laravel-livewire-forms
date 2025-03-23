@@ -38,7 +38,7 @@
                     axios.post('{{ route('laravel-livewire-forms.file-upload') }}', form_data, {
                         headers: {'Content-Type': 'multipart/form-data'}
                     }).then(response => {
-                        window.livewire.emit('fileUpdate', response.data.field_name, response.data.uploaded_files);
+                        window.livewire.dispatch('fileUpdate', response.data.field_name, response.data.uploaded_files);
                     });
                 })
             });
