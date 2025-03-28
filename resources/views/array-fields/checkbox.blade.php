@@ -4,7 +4,7 @@
             id="{{ $field->key . '.' . $key . '.' . $array_field->name }}"
             type="checkbox"
             class="form-check-input @error($field->key . '.' . $key . '.' . $array_field->name) is-invalid @enderror"
-            wire:model.lazy="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
+            wire:model.blur="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
 
         <label class="form-check-label" for="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
             {{ $array_field->placeholder }}

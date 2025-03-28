@@ -11,7 +11,7 @@
                     type="radio"
                     class="form-check-input @error($field->key) is-invalid @enderror"
                     value="{{ $value }}"
-                    wire:model.lazy="{{ $field->key }}">
+                    wire:model.live="{{ $field->key }}">
 
                 <label class="form-check-label" for="{{ $field->name . '.' . $loop->index }}">
                     {{ $label }}

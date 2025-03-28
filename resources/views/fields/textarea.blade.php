@@ -9,7 +9,7 @@
             rows="{{ $field->textarea_rows }}"
             class="form-control @error($field->key) is-invalid @enderror"
             placeholder="{{ $field->placeholder }}"
-            wire:model.lazy="{{ $field->key }}"></textarea>
+            wire:model.live="{{ $field->key }}"></textarea>
 
         @include('laravel-livewire-forms::fields.error-help')
     </div>

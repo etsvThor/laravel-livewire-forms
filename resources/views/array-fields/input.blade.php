@@ -4,7 +4,7 @@
         class="form-control form-control-sm @error($field->key . '.' . $key . '.' . $array_field->name) is-invalid @enderror"
         autocomplete="{{ $array_field->autocomplete }}"
         placeholder="{{ $array_field->placeholder }}"
-        wire:model.lazy="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
+        wire:model.blur="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
 
     @include('laravel-livewire-forms::array-fields.error-help')
 </div>

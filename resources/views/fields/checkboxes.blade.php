@@ -11,7 +11,7 @@
                     type="checkbox"
                     class="form-check-input @error($field->key) is-invalid @enderror"
                     value="{{ $value }}"
-                    wire:model.lazy="{{ $field->key . '.' . $loop->index }}">
+                    wire:model.live="{{ $field->key . '.' . $loop->index }}">
 
                 <label class="form-check-label" for="{{ $field->name . '.' . $loop->index }}">
                     {{ $label }}

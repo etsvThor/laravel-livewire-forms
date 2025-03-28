@@ -7,7 +7,7 @@
         <select
             id="{{ $field->name }}"
             class="custom-select @error($field->key) is-invalid @enderror"
-            wire:model.lazy="{{ $field->key }}">
+            wire:model.live="{{ $field->key }}">
 
             <option value="">{{ $field->placeholder }}</option>
 
