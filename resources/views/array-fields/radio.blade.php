@@ -6,7 +6,7 @@
                 type="radio"
                 class="form-check-input @error($field->key . '.' . $key . '.' . $array_field->name) is-invalid @enderror"
                 value="{{ $value }}"
-                wire:model.lazy="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
+                wire:model.blur="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
 
             <label class="form-check-label" for="{{ $field->key . '.' . $key . '.' . $array_field->name . '.' . $loop->index }}">
                 {{ $label }}

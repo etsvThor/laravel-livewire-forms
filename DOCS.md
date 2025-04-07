@@ -458,7 +458,7 @@ Example custom view file:
                 id="{{ $field->name }}"
                 type="text"
                 class="custom-field-class form-control @error($field->key) is-invalid @enderror"
-                wire:model.lazy="{{ $field->key }}">
+                wire:model.live="{{ $field->key }}">
     
             @include('laravel-livewire-forms::fields.error-help')
         </div>

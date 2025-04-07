@@ -10,7 +10,7 @@
             class="form-control @error($field->key) is-invalid @enderror"
             autocomplete="{{ $field->autocomplete }}"
             placeholder="{{ $field->placeholder }}"
-            wire:model.lazy="{{ $field->key }}">
+            wire:model.live="{{ $field->key }}">
 
         @include('laravel-livewire-forms::fields.error-help')
     </div>

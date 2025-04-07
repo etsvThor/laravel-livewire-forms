@@ -3,7 +3,7 @@
         rows="{{ $array_field->textarea_rows }}"
         class="form-control form-control-sm @error($field->key . '.' . $key . '.' . $array_field->name) is-invalid @enderror"
         placeholder="{{ $array_field->placeholder }}"
-        wire:model.lazy="{{ $field->key . '.' . $key . '.' . $array_field->name }}"></textarea>
+        wire:model.blur="{{ $field->key . '.' . $key . '.' . $array_field->name }}"></textarea>
 
     @include('laravel-livewire-forms::array-fields.error-help')
 </div>
