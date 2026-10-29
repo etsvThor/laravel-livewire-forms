@@ -6,12 +6,12 @@
     <div class="col-md">
         <div class="form-check">
             <input
-                id="{{ $field->name }}"
+                id="{{ $this->getId() }}-{{ $field->name }}"
                 type="checkbox"
                 class="form-check-input @error($field->key) is-invalid @enderror"
                 wire:model.live="{{ $field->key }}">
 
-            <label class="form-check-label" for="{{ $field->name }}">
+            <label class="form-check-label" for="{{ $this->getId() }}-{{ $field->name }}">
                 {{ $field->placeholder ?? $field->label }}
             </label>
         </div>
