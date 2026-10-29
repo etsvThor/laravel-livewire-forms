@@ -1,11 +1,11 @@
 <div class="form-group row">
-    <label for="{{ $field->name }}" class="col-md-2 col-form-label text-md-right">
+    <label for="{{ $this->getId() }}-{{ $field->name }}" class="col-md-2 col-form-label text-md-right">
         {{ $field->label }}
     </label>
 
     <div class="col-md">
         <select
-            id="{{ $field->name }}"
+            id="{{ $this->getId() }}-{{ $field->name }}"
             class="custom-select @error($field->key) is-invalid @enderror"
             wire:model.live="{{ $field->key }}">
 

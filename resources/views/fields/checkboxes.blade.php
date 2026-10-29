@@ -7,13 +7,13 @@
         @foreach($field->options as $value => $label)
             <div class="form-check">
                 <input
-                    id="{{ $field->name . '.' . $loop->index }}"
+                    id="{{ $this->getId() }}-{{ $field->name . '.' . $loop->index }}"
                     type="checkbox"
                     class="form-check-input @error($field->key) is-invalid @enderror"
                     value="{{ $value }}"
                     wire:model.live="{{ $field->key . '.' . $loop->index }}">
 
-                <label class="form-check-label" for="{{ $field->name . '.' . $loop->index }}">
+                <label class="form-check-label" for="{{ $this->getId() }}-{{ $field->name . '.' . $loop->index }}">
                     {{ $label }}
                 </label>
             </div>
