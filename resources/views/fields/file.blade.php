@@ -1,17 +1,19 @@
 <div class="form-group row">
-    <label for="{{ $field->name }}" class="col-md-2 col-form-label text-md-right">
+    <label for="{{ $this->getId() }}-{{ $field->name }}" class="col-md-2 col-form-label text-md-right">
         {{ $field->label }}
     </label>
 
     <div class="col-md">
         <div class="custom-file">
             <input
-                id="{{ $field->name }}"
+                id="{{ $this->getId() }}-{{ $field->name }}"
+                data-field-name="{{ $field->name }}"
+                data-component="{{ get_class($this) }}"
                 type="file"
                 class="custom-file-input @error($field->key) is-invalid @enderror"
                 {{ $field->file_multiple ? 'multiple' : '' }}>
 
-            <label class="custom-file-label" for="{{ $field->name }}">
+            <label class="custom-file-label" for="{{ $this->getId() }}-{{ $field->name }}">
                 {{ $field->placeholder }}
             </label>
         </div>

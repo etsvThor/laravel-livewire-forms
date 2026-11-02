@@ -2,13 +2,13 @@
     @foreach($array_field->options as $value => $label)
         <div class="form-check">
             <input
-                id="{{ $field->key . '.' . $key . '.' . $array_field->name . '.' . $loop->index }}"
+                id="{{ $this->getId() }}-{{ $field->key . '.' . $key . '.' . $array_field->name . '.' . $loop->index }}"
                 type="radio"
                 class="form-check-input @error($field->key . '.' . $key . '.' . $array_field->name) is-invalid @enderror"
                 value="{{ $value }}"
                 wire:model.blur="{{ $field->key . '.' . $key . '.' . $array_field->name }}">
 
-            <label class="form-check-label" for="{{ $field->key . '.' . $key . '.' . $array_field->name . '.' . $loop->index }}">
+            <label class="form-check-label" for="{{ $this->getId() }}-{{ $field->key . '.' . $key . '.' . $array_field->name . '.' . $loop->index }}">
                 {{ $label }}
             </label>
         </div>

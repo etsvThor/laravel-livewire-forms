@@ -24,24 +24,32 @@
         // Code is inspired by Pastor Ryan Hayden
         // https://github.com/livewire/livewire/issues/106
         // Thank you, sir!
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('input[type="file"]').forEach(file => {
-                file.addEventListener('input', event => {
-                    let form_data = new FormData();
-                    form_data.append('component', @json(get_class($this)));
-                    form_data.append('field_name', file.id);
+        // The listener is delegated, because Livewire replaces the file input when the form re-renders
+        if (! window.livewireFormsFileUpload) {
+            window.livewireFormsFileUpload = true;
 
-                    for (let i = 0; i < event.target.files.length; i++) {
-                        form_data.append('files[]', event.target.files[i]);
-                    }
+            document.addEventListener('input', event => {
+                const file = event.target;
+                if (! (file instanceof HTMLInputElement) || file.type !== 'file' || ! file.dataset.fieldName) {
+                    return;
+                }
 
-                    axios.post('{{ route('laravel-livewire-forms.file-upload') }}', form_data, {
-                        headers: {'Content-Type': 'multipart/form-data'}
-                    }).then(response => {
-                        Livewire.dispatch('fileUpdate', {field_name: response.data.field_name, uploaded_files: response.data.uploaded_files});
-                    });
-                })
+                const component = Livewire.find(file.closest('[wire\\:id]').getAttribute('wire:id'));
+
+                let form_data = new FormData();
+                form_data.append('component', file.dataset.component);
+                form_data.append('field_name', file.dataset.fieldName);
+
+                for (let i = 0; i < file.files.length; i++) {
+                    form_data.append('files[]', file.files[i]);
+                }
+
+                axios.post('{{ route('laravel-livewire-forms.file-upload') }}', form_data, {
+                    headers: {'Content-Type': 'multipart/form-data'}
+                }).then(response => {
+                    component.call('fileUpdate', response.data.field_name, response.data.uploaded_files);
+                });
             });
-        });
+        }
     </script>
 @endpush
